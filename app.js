@@ -54,7 +54,7 @@ function checkans(idx)
        document.querySelector("h3").innerText = `Highest Score: ${highest}`;
      }
 
-    h2.innerHTML = `Game over! your score was <b>${level} <b/>please try again.`;
+    h2.innerHTML = `Game over! please try again.`;
     document.querySelector("body").style.background = "red";
     setTimeout(function () {
       document.querySelector("body").style.background = "white";
