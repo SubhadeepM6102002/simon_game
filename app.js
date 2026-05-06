@@ -1,8 +1,8 @@
 let gameseq = [];
 let userseq = [];
-
 let start = false;
 let level = 0;
+let highest = 0;
 let btns = ["red", "yellow", "green", "blue"];
 document.addEventListener("keydown", function () {
   if (start == false) {
@@ -49,6 +49,11 @@ function checkans(idx)
     }
   }
   else {
+     if (level > highest) {
+       highest = level;
+       document.querySelector("h3").innerText = `Highest Score: ${highest}`;
+     }
+
     h2.innerHTML = `Game over! your score was <b>${level} <b/>please try again.`;
     document.querySelector("body").style.background = "red";
     setTimeout(function () {
